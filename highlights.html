@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Highlights 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Nuestros mejores momentos 2025 ✨</h1>
+
+    <img id="slideshow" src="fotos/foto1.png" alt="Momentos juntos">
+
+    <a href="index.html" class="link-btn">Volver</a>
+  </div>
+
+  <script>
+    const fotos = [
+      "fotos/foto1.png",
+      "fotos/foto2.png",
+      "fotos/foto3.png"
+    ];
+
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % fotos.length;
+      document.getElementById("slideshow").src = fotos[i];
+    }, 3000);
+  </script>
+</body>
+</html>
